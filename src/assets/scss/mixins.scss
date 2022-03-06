@@ -1,0 +1,34 @@
+@use "./variables.scss" as *;
+
+@mixin main-bg {
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    z-index: -1;
+  }
+}
+
+@mixin vp-tablet {
+  @media (min-width: $vp-tablet) {
+    @content;
+  }
+}
+
+@mixin vp-laptop {
+  @media (min-width: $vp-laptop) {
+    @content;
+  }
+}
+
+@mixin vp-desktop {
+  @media (min-width: $vp-desktop) {
+    @content;
+  }
+}
