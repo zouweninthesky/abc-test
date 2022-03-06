@@ -1,0 +1,80 @@
+@use "@/assets/scss/variables.scss" as *;
+@use "@/assets/scss/mixins.scss" as *;
+
+.ad-quote {
+  @include main-bg;
+
+  padding: 5.25rem 0 3rem;
+
+  overflow: hidden;
+
+  &__quote {
+    position: absolute;
+    top: 41px;
+    left: 24px;
+
+    &--second {
+      top: auto;
+      right: 28px;
+      bottom: 34px;
+      left: auto;
+
+      transform: rotate(180deg);
+    }
+
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &__content {
+    font-family: "Yeseva One";
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    color: $color-bg-secondary;
+    letter-spacing: 0.05em;
+    text-align: center;
+
+    margin: 0;
+    padding: 0 1.5rem;
+  }
+
+  @include vp-tablet {
+    // padding: 5.25rem 0 3rem;
+
+    // overflow: hidden;
+
+    &__quote {
+      // position: absolute;
+      // top: 41px;
+      // left: 24px;
+
+      &--second {
+        // top: auto;
+        // right: 28px;
+        // bottom: 34px;
+        // left: auto;
+
+        // transform: rotate(180deg);
+      }
+
+      & svg {
+        // width: 1.5rem;
+        // height: 1.5rem;
+      }
+    }
+
+    &__content {
+      // font-family: "Yeseva One";
+      // font-size: 1.125rem;
+      // line-height: 1.4375rem;
+      // color: $color-bg-secondary;
+      // letter-spacing: 0.05em;
+      // text-align: center;
+
+      // margin: 0;
+      // padding: 0 1.5rem;
+    }
+  }
+}

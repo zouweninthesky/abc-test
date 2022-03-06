@@ -1,0 +1,28 @@
+@use "@/assets/scss/variables.scss" as *;
+
+.tips {
+  padding: 2.375rem 0 2.5rem;
+
+  background-color: $color-bg-secondary;
+
+  &__content {
+    line-height: 1.5rem;
+    color: $color-bg-primary;
+    letter-spacing: 0.05em;
+
+    margin-top: 0;
+
+    & span {
+      font-weight: 700;
+    }
+
+    & strong {
+      text-transform: uppercase;
+    }
+  }
+
+  &__img {
+    width: 13.4375rem;
+    margin: 1.25rem auto 1.875rem;
+  }
+}

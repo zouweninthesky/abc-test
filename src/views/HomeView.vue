@@ -1,9 +1,15 @@
 <script setup>
-import TheWelcome from '@/components/TheWelcome.vue'
+import Intro from "@/components/Intro/Intro.vue";
+import AdQuote from "@/components/AdQuote/AdQuote.vue";
+import Tips from "@/components/Tips/Tips.vue";
+import HomeFooter from "@/components/HomeFooter/HomeFooter.vue";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Intro />
+    <AdQuote />
+    <Tips />
+    <HomeFooter />
   </main>
 </template>
