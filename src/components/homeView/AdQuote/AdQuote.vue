@@ -43,5 +43,5 @@
 </template>
 
 <style lang="scss">
-@import "@/components/AdQuote/AdQuote.scss";
+@import "@/components/homeView/AdQuote/AdQuote.scss";
 </style>

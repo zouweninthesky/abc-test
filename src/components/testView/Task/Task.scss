@@ -1,0 +1,27 @@
+@use "@/assets/scss/variables.scss" as *;
+@use "@/assets/scss/mixins.scss" as *;
+
+.task {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    font-family: "PT Serif";
+    font-size: 1.25rem;
+    line-height: 1.65625rem;
+    letter-spacing: 0.05em;
+    color: $color-bg-secondary;
+
+    margin-bottom: 50px;
+  }
+
+  &__answers {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+}

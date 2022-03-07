@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+// import { RouterLink } from "vue-router"
+</script>
 
 <template>
   <section class="intro">
@@ -6,7 +8,9 @@
     <div class="container">
       <p class="intro__header-sub">Пройдите точный и быстрый</p>
       <h1 class="intro__header">Тест на определение IQ</h1>
-      <button class="button button--test">Пройти тест</button>
+      <router-link to="/test" class="button button--test"
+        >Пройти тест</router-link
+      >
       <p class="intro__description">
         И получите рекомендации
         по&nbsp;развитию&nbsp;своего&nbsp;интеллекта<span
@@ -37,5 +41,5 @@
 </template>
 
 <style lang="scss">
-@import "@/components/Intro/Intro.scss";
+@import "@/components/homeView/Intro/Intro.scss";
 </style>

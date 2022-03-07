@@ -26,7 +26,9 @@
         <strong>изменить все аспекты своей жизни:</strong> от финансового до
         любовного.
       </div>
-      <button class="button home-footer__button">Пройти тест</button>
+      <router-link to="/test" class="button home-footer__button"
+        >Пройти тест</router-link
+      >
       <p class="home-footer__copyright">
         <span
           ><svg
@@ -50,5 +52,5 @@
 </template>
 
 <style lang="scss">
-@import "@/components/HomeFooter/HomeFooter.scss";
+@import "@/components/homeView/HomeFooter/HomeFooter.scss";
 </style>

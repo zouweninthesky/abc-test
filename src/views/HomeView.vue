@@ -1,8 +1,8 @@
 <script setup>
-import Intro from "@/components/Intro/Intro.vue";
-import AdQuote from "@/components/AdQuote/AdQuote.vue";
-import Tips from "@/components/Tips/Tips.vue";
-import HomeFooter from "@/components/HomeFooter/HomeFooter.vue";
+import Intro from "@/components/homeView/Intro/Intro.vue";
+import AdQuote from "@/components/homeView/AdQuote/AdQuote.vue";
+import Tips from "@/components/homeView/Tips/Tips.vue";
+import HomeFooter from "@/components/homeView/HomeFooter/HomeFooter.vue";
 </script>
 
 <template>
