@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <main class="">
+  <main class="test-view">
     <ProgressBar
       v-bind="{ currentStep: currentStep, numberOfSteps: quiz.length }"
     />
@@ -36,4 +36,6 @@ export default {
   </main>
 </template>
 
-<style></style>
+<style>
+@import "@/assets/scss/test-view.scss";
+</style>

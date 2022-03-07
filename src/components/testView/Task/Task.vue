@@ -28,15 +28,23 @@ export default {
   <section class="task">
     <h2 class="visually-hidden"></h2>
     <form class="task__form" action="#">
-      <p class="task__text">{{ p.step.task }}</p>
-      <img src="" alt="" class="task__image" />
-      <ul class="task__answers">
+      <p class="task__text">{{ step.task }}</p>
+      <ul v-if="step.subTask" class="task__spans">
+        <li v-for="s in step.subTask" class="task__span">{{ s }}</li>
+      </ul>
+      <img
+        v-if="step.img"
+        :src="step.img"
+        :alt="step.alt"
+        class="task__image"
+      />
+      <ul v-if="step.modifier !== 'pick-color'" class="task__answers">
         <TaskItem
-          v-for="a in p.step.answers"
+          v-for="a in step.answers"
           v-bind="{
             value: a.value,
             label: a.label,
-            name: p.step.name,
+            name: step.name,
           }"
           @can-continue="setContinueTrue"
         />
