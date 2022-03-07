@@ -1,5 +1,6 @@
 <script setup>
 import Task from "@/components/testView/Task/Task.vue";
+import ProgressBar from "@/components/testView/ProgressBar/ProgressBar.vue";
 </script>
 
 <script>
@@ -7,22 +8,12 @@ import quiz from "@/data/quiz.js";
 
 export default {
   data() {
-    console.log(1);
-    console.log(quiz);
     return {
-      canContinue: false,
       currentStep: 0,
       quiz: quiz,
-      userAnswers: Array(quiz.length).fill(""),
     };
   },
   methods: {
-    setContinueTrue() {
-      this.canContinue = true;
-    },
-    setContinueFalse() {
-      this.canContinue = false;
-    },
     nextStep() {
       this.currentStep++;
       this.canContinue = false;
@@ -33,18 +24,15 @@ export default {
 
 <template>
   <main class="">
+    <ProgressBar
+      v-bind="{ currentStep: currentStep, numberOfSteps: quiz.length }"
+    />
     <Task
       v-bind="{
-        task: quiz[currentStep].task,
-        name: quiz[currentStep].name,
-        answers: quiz[currentStep].answers,
-        answerField: userAnswers[currentStep],
+        step: quiz[currentStep],
       }"
-      @can-continue="setContinueTrue"
+      @next-step="nextStep"
     />
-    <button class="button" :disabled="!canContinue" @click="nextStep">
-      Далее
-    </button>
   </main>
 </template>
 

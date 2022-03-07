@@ -3,7 +3,6 @@ const p = defineProps({
   value: String,
   label: String,
   name: String,
-  answerField: String,
 });
 </script>
 
@@ -13,7 +12,6 @@ const p = defineProps({
       :id="p.value"
       :name="p.name"
       :value="p.value"
-      v-model="p.answerField"
       type="radio"
       @change="$emit('can-continue')"
     />

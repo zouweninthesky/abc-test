@@ -35,6 +35,7 @@ const quiz = [
   {
     id: 3,
     task: "Продолжите числовой ряд:",
+    modifier: "span",
     subTask: ["18", "20", "24", "32"],
     name: "numbers",
     answers: [
