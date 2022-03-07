@@ -16,7 +16,6 @@ export default {
   methods: {
     nextStep() {
       this.currentStep++;
-      this.canContinue = false;
     },
   },
 };
@@ -24,15 +23,18 @@ export default {
 
 <template>
   <main class="test-view">
-    <ProgressBar
-      v-bind="{ currentStep: currentStep, numberOfSteps: quiz.length }"
-    />
-    <Task
-      v-bind="{
-        step: quiz[currentStep],
-      }"
-      @next-step="nextStep"
-    />
+    <div v-if="currentStep !== quiz.length" class="test-view__wrapper">
+      <ProgressBar
+        v-bind="{ currentStep: currentStep, numberOfSteps: quiz.length }"
+      />
+      <Task
+        v-bind="{
+          step: quiz[currentStep],
+        }"
+        @next-step="nextStep"
+      />
+    </div>
+    <div v-else class="test-view__wrapper"></div>
   </main>
 </template>
 

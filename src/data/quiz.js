@@ -98,7 +98,9 @@ const quiz = [
     id: 7,
     task: "Выберите правильную фигуру из четырех пронумерованных",
     name: "figure",
-    img: "",
+    img: true,
+    imgSizes: { width: 11.5625, height: 14.6875 },
+    modifier: "row",
     answers: [
       { value: "1", label: "1" },
       { value: "2", label: "2" },
@@ -126,7 +128,8 @@ const quiz = [
     id: 9,
     task: "Какое определени, по-Вашему, больше подходит к этому геометрическому изображению:",
     name: "pyramid",
-    img: "",
+    img: true,
+    imgSizes: { width: 10.8125, height: 7.1875 },
     answers: [
       { value: "spiky", label: "Оно остроконечное" },
       { value: "steady", label: "Оно устойчиво" },
@@ -137,7 +140,9 @@ const quiz = [
     id: 10,
     task: "Вставьте подходящее число",
     name: "star",
-    img: "",
+    img: true,
+    imgSizes: { width: 14.25, height: 12.9375 },
+    modifier: "row",
     answers: [
       { value: "34", label: "34" },
       { value: "36", label: "36" },

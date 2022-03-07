@@ -10,7 +10,7 @@ const p = defineProps({
     <div class="progress-bar__bar">
       <div
         class="progress-bar__progress"
-        v-bind:style="{
+        :style="{
           width: `${(100 / numberOfSteps) * (currentStep + 1)}%`,
         }"
       ></div>

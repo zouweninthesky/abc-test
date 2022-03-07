@@ -1,13 +1,12 @@
 <script setup>
 const p = defineProps({
   value: String,
-  label: String,
   name: String,
 });
 </script>
 
 <template>
-  <li class="task-item">
+  <li class="task-item-square">
     <input
       :id="value"
       :name="name"
@@ -15,10 +14,10 @@ const p = defineProps({
       type="radio"
       @change="$emit('can-continue')"
     />
-    <label :for="value">{{ label }}</label>
+    <label :for="value">{{ value }}</label>
   </li>
 </template>
 
 <style lang="scss">
-@import "@/components/testView/Task/TaskItem/TaskItem.scss";
+@import "@/components/testView/Task/TaskItemSquare/TaskItemSquare.scss";
 </style>
