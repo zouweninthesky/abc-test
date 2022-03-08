@@ -1,0 +1,27 @@
+@use "@/assets/scss/variables.scss" as *;
+@use "@/assets/scss/mixins.scss" as *;
+
+.progress-bar {
+  padding: 1.25rem 1.875rem;
+
+  &__bar {
+    position: relative;
+
+    width: 100%;
+    height: 0.6875rem;
+
+    background-color: $color-bg-quaternary;
+    border-radius: 0.65625rem;
+  }
+
+  &__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+
+    background-color: $color-progress;
+    border-radius: 0.65625rem;
+  }
+}

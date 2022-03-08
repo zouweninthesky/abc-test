@@ -12,11 +12,11 @@
         которая&nbsp;принесет&nbsp;вам скорейший финансовый результат.
       </p>
       <img src="@/assets/img/tips.png" alt="" class="tips__img" />
-      <button class="button">Пройти тест</button>
+      <router-link to="/test" class="button">Пройти тест</router-link>
     </div>
   </section>
 </template>
 
 <style lang="scss">
-@import "@/components/Tips/Tips.scss";
+@import "@/components/homeView/Tips/Tips.scss";
 </style>
