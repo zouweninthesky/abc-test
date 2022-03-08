@@ -1,3 +1,43 @@
+@use "@/assets/scss/variables.scss" as *;
+@use "@/assets/scss/mixins.scss" as *;
+
 .test-view {
+  @include main-bg;
+
   height: 100vh;
+
+  padding-top: 2.875rem;
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__pre-result-header {
+    font-family: "PT Serif";
+    font-weight: 400;
+    font-size: 1.4375rem;
+    letter-spacing: 0.1em;
+    color: $color-bg-secondary;
+    text-align: center;
+
+    padding: 0 3rem;
+  }
+
+  &__pre-result-description {
+    font-family: "PT Serif";
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: $color-bg-secondary;
+
+    padding: 1rem 1rem 0;
+  }
+
+  &--result {
+    height: calc(100vh + 2.25rem);
+    overflow: hidden;
+
+    & .test-view__bg {
+      height: 100%;
+    }
+  }
 }

@@ -37,6 +37,7 @@ const quiz = [
     task: "Продолжите числовой ряд:",
     modifier: "span",
     subTask: ["18", "20", "24", "32"],
+    small: true,
     name: "numbers",
     answers: [
       { value: "62", label: "62" },
@@ -85,6 +86,7 @@ const quiz = [
     id: 6,
     task: "Какой из городов лишний?",
     name: "town",
+    small: true,
     answers: [
       { value: "Washington", label: "Вашингтон" },
       { value: "London", label: "Лондон" },
@@ -96,7 +98,7 @@ const quiz = [
   },
   {
     id: 7,
-    task: "Выберите правильную фигуру из четырех пронумерованных",
+    task: "Выберите\u00A0правильную\u00A0фигуру из\u00A0четырех\u00A0пронумерованных.",
     name: "figure",
     img: true,
     imgSizes: { width: 11.5625, height: 14.6875 },
@@ -126,7 +128,7 @@ const quiz = [
   },
   {
     id: 9,
-    task: "Какое определени, по-Вашему, больше подходит к этому геометрическому изображению:",
+    task: "Какое определениe, по-Вашему, больше подходит к этому геометрическому изображению:",
     name: "pyramid",
     img: true,
     imgSizes: { width: 10.8125, height: 7.1875 },

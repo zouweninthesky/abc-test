@@ -46,7 +46,7 @@ export default {
 
 <template>
   <section class="task">
-    <h2 class="visually-hidden"></h2>
+    <h2 class="visually-hidden">Задание теста</h2>
     <form class="task__form" action="#" ref="form">
       <p class="task__text">{{ step.task }}</p>
       <ul v-if="step.subTask" class="task__spans">
@@ -65,6 +65,7 @@ export default {
       <ul
         v-if="step.modifier !== 'pick-color' && step.modifier !== 'row'"
         class="task__answers"
+        :class="{ 'task__answers--small': step.small }"
       >
         <TaskItem
           v-for="a in step.answers"

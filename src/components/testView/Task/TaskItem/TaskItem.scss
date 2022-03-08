@@ -65,3 +65,9 @@
     margin-bottom: 0;
   }
 }
+
+.task__answers--small {
+  & .task-item label {
+    min-height: 40px;
+  }
+}

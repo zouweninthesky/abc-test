@@ -1,0 +1,140 @@
+@use "@/assets/scss/variables.scss" as *;
+@use "@/assets/scss/mixins.scss" as *;
+
+.result {
+  @include main-bg;
+
+  &__bg {
+    height: 100%;
+  }
+
+  height: 100%;
+  padding-top: 1rem;
+
+  &__lightning {
+    position: absolute;
+    top: 400px;
+    right: -115px;
+
+    width: 10.3125rem;
+    height: 10.3125rem;
+
+    transform: rotate(-53.15deg);
+    z-index: -1;
+
+    &--left {
+      top: 345px;
+      right: auto;
+      left: -90px;
+    }
+  }
+
+  &__container {
+    padding: 0 0.75rem;
+    overflow: hidden;
+  }
+
+  &__header {
+    font-family: "PT Serif";
+    font-size: 1rem;
+    line-height: 1rem;
+    color: $color-bg-secondary;
+    text-align: center;
+    text-transform: uppercase;
+
+    margin-top: 0;
+  }
+
+  &__description {
+    font-family: "PT Serif";
+    font-size: 0.875rem;
+    color: $color-bg-secondary;
+    text-align: center;
+  }
+
+  &__encourage {
+    font-family: "PT Serif";
+    font-size: 1.125rem;
+    color: $color-progress;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__card {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 0.5rem;
+    color: $color-bg-secondary;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 0 1.25rem;
+    padding: 0.875rem 0.75rem;
+
+    background-color: $color-bg-tertiary;
+    border-radius: 0.3125rem;
+  }
+
+  &__timer {
+    font-family: "PT Serif";
+    font-size: 0.6875rem;
+    line-height: 1.875rem;
+    color: $color-progress;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    & span {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__call {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: "Roboto";
+    font-weight: 900;
+    color: $color-bg-secondary;
+    letter-spacing: 0.05em;
+    text-align: left;
+
+    min-height: 5.75rem;
+
+    padding: 0 1rem;
+
+    background-color: $color-call;
+    border-radius: 0.3125rem;
+    border: 0;
+
+    & svg {
+      width: 1.8125rem;
+      height: 1.8125rem;
+
+      margin-right: 1.125rem;
+    }
+  }
+
+  &__terms {
+    position: absolute;
+    left: 50%;
+    top: calc(100vh - 4.25rem);
+
+    font-family: "Roboto";
+    font-size: 0.4375rem;
+    color: $color-bg-secondary;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1875rem;
+
+    width: 100%;
+
+    padding: 0 0.75rem;
+
+    transform: translateX(-50%);
+    opacity: 0.5;
+  }
+}
