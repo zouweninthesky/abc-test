@@ -5,12 +5,12 @@
     <h2 class="visually-hidden"></h2>
     <img class="home-footer__bg" src="@/assets/img/bg-main.jpg" alt="" />
     <img
-      src="@/assets/img/bg-lightning-right.png"
+      src="@/assets/img/bg-lightning.png"
       alt=""
       class="home-footer__lightning"
     />
     <img
-      src="@/assets/img/bg-lightning-left.png"
+      src="@/assets/img/bg-lightning.png"
       alt=""
       class="home-footer__lightning home-footer__lightning--left"
     />

@@ -1,0 +1,145 @@
+@use "@/assets/scss/variables.scss" as *;
+@use "@/assets/scss/mixins.scss" as *;
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 46px;
+  width: 100%;
+
+  z-index: 1;
+
+  background-color: $color-font-primary;
+
+  &__toggle-button {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0.25rem;
+
+    width: 2.875rem;
+    height: 2.875rem;
+
+    padding: 0;
+
+    background-color: transparent;
+    border: 0;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 1rem;
+      left: 0.675rem;
+
+      width: 1.5rem;
+      height: 0.1875rem;
+
+      background-color: $color-nav;
+      box-shadow: 0 0.4375rem 0 0 $color-nav, 0 0.875rem 0 0 $color-nav;
+    }
+  }
+
+  &__header-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0 3rem;
+  }
+
+  &__img {
+    width: 48px;
+    height: 47px;
+  }
+
+  &__header {
+    font-size: 0.75rem;
+    color: $color-accent;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    margin: 0;
+    margin-left: 0.5rem;
+
+    &--big {
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    padding-top: 6.875rem;
+  }
+
+  &__nav-list {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav-item {
+    & a {
+      display: block;
+
+      font-family: "Roboto";
+      font-weight: 300;
+      color: $color-bg-secondary;
+      text-transform: uppercase;
+
+      padding: 1rem 0;
+      padding-left: 1.4375rem;
+    }
+  }
+
+  &--opened {
+    height: 100vh;
+
+    & .app-header {
+      &__toggle-button {
+        left: auto;
+        right: 0.25rem;
+
+        &::before,
+        &::after {
+          top: 21px;
+          left: 7px;
+
+          width: 32px;
+          height: 4px;
+
+          background-color: $color-accent;
+          transform: rotate(45deg);
+
+          box-shadow: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+
+          transform: rotate(135deg);
+        }
+      }
+
+      &__header-section {
+      }
+
+      &__img {
+      }
+
+      &__nav {
+        display: block;
+      }
+    }
+  }
+}
