@@ -1,4 +1,5 @@
 <script setup>
+import AppHeader from "@/components/AppHeader/AppHeader.vue";
 import Task from "@/components/testView/Task/Task.vue";
 import ProgressBar from "@/components/testView/ProgressBar/ProgressBar.vue";
 import Loader from "@/components/testView/Result/Loader/Loader.vue";
@@ -25,7 +26,7 @@ export default {
       this.currentStep++;
       if (this.currentStep === this.quiz.length) {
         setTimeout(() => {
-          // this.showResult();
+          this.showResult();
           setInterval(this.timerTick, 1000);
         }, 2000);
       }
@@ -39,6 +40,7 @@ export default {
 
 <template>
   <main class="test-view" :class="{ 'test-view--result': resultVisible }">
+    <AppHeader :test="true" :finished="resultVisible" />
     <div v-if="currentStep !== quiz.length" class="test-view__wrapper">
       <img class="test-view__bg" src="@/assets/img/bg-main.jpg" alt="" />
       <ProgressBar
