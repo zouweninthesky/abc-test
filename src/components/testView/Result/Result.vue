@@ -1,4 +1,6 @@
 <script setup>
+import FetchResult from "@/components/testView/Result/FetchResult/FetchResult.vue";
+
 const p = defineProps({
   time: Number,
 });
@@ -6,11 +8,20 @@ const p = defineProps({
 
 <script>
 export default {
+  data() {
+    return {
+      fetchData: null,
+    };
+  },
   methods: {
     getProperTime(time) {
       const mins = `${Math.floor(time / 60)}`.padStart(2, "0");
       const secs = `${time % 60}`.padStart(2, "0");
       return `${mins}:${secs}`;
+    },
+    async getFakeData() {
+      const data = await fetch("https://swapi.dev/api/people/1/");
+      this.fetchData = await data.json();
     },
   },
 };
@@ -45,7 +56,7 @@ export default {
         Звоните скорее, запись доступна всего
         <span>{{ getProperTime(time) }}</span> минут
       </p>
-      <button type="button" class="result__call">
+      <button type="button" class="result__call" @click="getFakeData">
         <svg
           width="29"
           height="29"
@@ -72,10 +83,10 @@ export default {
         </svg>
         Позвонить и прослушать результат
       </button>
-      <p class="result__terms">
-        TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN
-        FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,
-      </p>
+      <FetchResult
+        v-if="fetchData !== null && fetchData.name"
+        :data="fetchData"
+      />
     </div>
   </div>
 </template>

@@ -66,6 +66,10 @@ export default {
     <div v-else class="test-view__wrapper">
       <img class="test-view__bg" src="@/assets/img/bg-main.jpg" alt="" />
       <Result :time="time" />
+      <p class="test-view__terms">
+        TERMENI SI CONDITII: ACESTA ESTE UN SERVICIU DE DIVERTISMENT. PRIN
+        FOLOSIREA LUI DECLARATI CA AVETI 18 ANI IMPLINITI,
+      </p>
     </div>
   </main>
 </template>

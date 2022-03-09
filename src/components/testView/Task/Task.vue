@@ -48,7 +48,9 @@ export default {
   <section class="task">
     <h2 class="visually-hidden">Задание теста</h2>
     <form class="task__form" action="#" ref="form">
-      <p class="task__text">{{ step.task }}</p>
+      <p class="task__text" :style="{ fontSize: `${step.fontSize}rem` }">
+        {{ step.task }}
+      </p>
       <ul v-if="step.subTask" class="task__spans">
         <li v-for="s in step.subTask" class="task__span">{{ s }}</li>
       </ul>

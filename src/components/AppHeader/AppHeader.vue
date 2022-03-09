@@ -49,13 +49,22 @@ export default {
     <nav class="app-header__nav">
       <ul class="app-header__nav-list">
         <li class="app-header__nav-item">
-          <a href="">Главная</a>
+          <a v-if="!test" href="#" @click="toggleMenu">Главная</a>
+          <router-link v-else to="/" @click="toggleMenu">Главная</router-link>
         </li>
         <li class="app-header__nav-item">
-          <a href="">Информация о тесте</a>
+          <a v-if="!test" href="#quote" @click="toggleMenu"
+            >Информация о тесте</a
+          >
+          <router-link v-else to="/" @click="toggleMenu"
+            >Информация о тесте</router-link
+          >
         </li>
         <li class="app-header__nav-item">
-          <a href="">Пройти тест</a>
+          <router-link v-if="!test" to="/test" @click="toggleMenu"
+            >Пройти тест</router-link
+          >
+          <a v-else href="#" @click="toggleMenu">Пройти тест</a>
         </li>
       </ul>
     </nav>

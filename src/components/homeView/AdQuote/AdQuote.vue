@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="ad-quote">
+  <section class="ad-quote" id="quote">
     <h2 class="visually-hidden"></h2>
     <img src="@/assets/img/bg-secondary.jpg" alt="" class="ad-quote__bg" />
     <span class="ad-quote__quote">

@@ -1,0 +1,19 @@
+@use "@/assets/scss/variables.scss" as *;
+@use "@/assets/scss/mixins.scss" as *;
+
+.fetch-result {
+  &__list {
+    list-style: none;
+
+    // margin: 0;
+    margin-bottom: 2rem;
+    padding-left: 0;
+  }
+
+  &__item {
+    font-family: "Roboto";
+    font-size: 0.75rem;
+
+    color: $color-bg-secondary;
+  }
+}
