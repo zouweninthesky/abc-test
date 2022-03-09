@@ -156,7 +156,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 
-  min-width: 12.5rem; //200
+  width: 12.5rem; //200
   min-height: 2.75rem; //44
   margin: 0 auto;
   padding: 0.75rem 1.125rem;
@@ -168,7 +168,7 @@ a {
 
   &--test {
     min-height: 2.5625rem;
-    min-width: 11.8125rem;
+    width: 11.8125rem;
 
     padding: 0.625rem 1.125rem;
   }

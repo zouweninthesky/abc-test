@@ -38,6 +38,7 @@ const quiz = [
     modifier: "span",
     subTask: ["18", "20", "24", "32"],
     small: true,
+    fontSize: "1.1875",
     name: "numbers",
     answers: [
       { value: "62", label: "62" },
@@ -52,6 +53,7 @@ const quiz = [
     id: 4,
     task: "Выберите цвет, который сейчас наиболее вам приятен:",
     modifier: "pick-color",
+    fontSize: "1.1875",
     name: "color1",
     answers: [
       { value: "#A8A8A8" },
@@ -69,6 +71,7 @@ const quiz = [
     id: 5,
     task: "Отдохните пару секунд, ещё раз выберите цвет, который сейчас наиболее вам приятен:",
     modifier: "pick-color",
+    fontSize: "1.1875",
     name: "color2",
     answers: [
       { value: "#A8A8A8" },
@@ -99,6 +102,7 @@ const quiz = [
   {
     id: 7,
     task: "Выберите\u00A0правильную\u00A0фигуру из\u00A0четырех\u00A0пронумерованных.",
+    fontSize: "1.125",
     name: "figure",
     img: true,
     imgSizes: { width: 11.5625, height: 14.6875 },
@@ -113,6 +117,7 @@ const quiz = [
   {
     id: 8,
     task: "Вам привычнее и важнее",
+    fontSize: "1.1875",
     name: "preference",
     answers: [
       {
@@ -129,6 +134,7 @@ const quiz = [
   {
     id: 9,
     task: "Какое определениe, по-Вашему, больше подходит к этому геометрическому изображению:",
+    fontSize: "1",
     name: "pyramid",
     img: true,
     imgSizes: { width: 10.8125, height: 7.1875 },

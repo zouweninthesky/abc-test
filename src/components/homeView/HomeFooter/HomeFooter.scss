@@ -10,18 +10,21 @@
 
   &__lightning {
     position: absolute;
-    top: 5.375rem;
-    right: 0;
+    top: 85px;
+    right: -65px;
 
     width: 10.3125rem;
     height: 10.3125rem;
 
     z-index: -1;
+    transform: rotate(19.42deg);
 
     &--left {
-      top: 19.625rem;
+      top: 300px;
       right: auto;
-      left: 0;
+      left: -69px;
+
+      transform: rotate(-31.55deg);
     }
   }
 
